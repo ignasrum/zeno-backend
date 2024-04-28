@@ -1,2 +1,2 @@
 # zeno-backend
-Kotlin backend for the Zeno ereader app
+Kotlin backend for the Zeno eReader app
