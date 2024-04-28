@@ -1,0 +1,9 @@
+{
+    "url": "http://localhost:8080/test/{test}",
+    "method": "POST",
+    "url_params": {},
+    "json": {},
+    "auth": {},
+    "files": [],
+    "headers": {}
+}

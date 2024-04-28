@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    container_name: zeno-postgres-database
+    image: postgres:12.16-bullseye
+    environment:
+      - POSTGRES_PASSWORD=SuperComplexPassword-123
+    ports:
+      - 5432:5432
+    volumes:
+      - ./init/sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready", "-d", "db_prod"]
+      interval: 10s
+      retries: 10
+      start_period: 10s
+      timeout: 3s
